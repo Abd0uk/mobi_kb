@@ -1,0 +1,17 @@
+{% extends 'operators/base.html' %}
+
+{% block body %}
+
+    <h1>Operator Details</h1>
+    
+    <a href="{% url 'index' %}">Home</a>
+    
+    <ul>
+        <li><strong>Operator Name:</strong> {{ operator.operator_name }}</li>
+        <li><strong>APN:</strong> {{ operator.apn }}</li>
+        <li><strong>Phone Number:</strong> {{ operator.phone_number }}</li>
+        <li><strong>ICCID:</strong> {{ operator.iccid }}</li>
+        <li><strong>eSIM Status:</strong> {{ operator.esim_status }}</li>
+    </ul>
+
+{% endblock body %}

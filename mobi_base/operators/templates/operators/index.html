@@ -1,0 +1,14 @@
+{% extends 'operators/base.html' %}
+
+{% block body %}
+
+<h1>Operators</h1>
+<ul>
+    {% for operator in Operators %}
+        <li>
+            <a href="{% url 'operator_detail' operator.id %}">{{ operator.operator_name }}</a>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock body %}
