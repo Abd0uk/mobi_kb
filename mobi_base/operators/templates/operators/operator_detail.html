@@ -6,12 +6,61 @@
     
     <a href="{% url 'index' %}">Home</a>
     
-    <ul>
-        <li><strong>Operator Name:</strong> {{ operator.operator_name }}</li>
-        <li><strong>APN:</strong> {{ operator.apn }}</li>
-        <li><strong>Phone Number:</strong> {{ operator.phone_number }}</li>
-        <li><strong>ICCID:</strong> {{ operator.iccid }}</li>
-        <li><strong>eSIM Status:</strong> {{ operator.esim_status }}</li>
-    </ul>
+ <!-- Operator Info Section -->
+ <div class="info-grid">
+    <div class="info-card">
+        <h3>Operator Name</h3>
+        <p>{{ operator.operator_name }}</p>
+    </div>
+    <div class="info-card">
+        <h3>APN</h3>
+        <p>{{ operator.apn }}</p>
+    </div>
+    <div class="info-card">
+        <h3>Phone Number</h3>
+        <p>{{ operator.phone_number }}</p>
+    </div>
+    <div class="info-card">
+        <h3>ICCID</h3>
+        <p>{{ operator.iccid }}</p>
+    </div>
+    <div class="info-card">
+        <h3>eSIM Status</h3>
+        <p>{{ operator.esim_status }}</p>
+    </div>
+    <div class="info-card">
+        <h3>Top-Up Eligibility</h3>
+        <p>{{ operator.topup_eligibility }}</p>
+    </div>
+    <div class="info-card">
+        <h3>Check Usage</h3>
+        <p>{{ operator.check_usage }}</p>
+    </div>
+    <div class="country-card">
+        <h3>Networks to Connect To</h3>
+        <select id="country">
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+            <option value="germany">Germany</option>
+            <!-- Add more countries as needed -->
+        </select>
+    </div>
+</div>
+
+<!-- Policy/Process Section -->
+<div class="process-grid">
+    <div class="process-card">
+        <h4>Activation Process</h4>
+        <p>{{ operator.activation }}</p>
+    </div>
+    <div class="process-card">
+        <h4>Replacement Process</h4>
+        <p>{{ operator.replacement }}</p>
+    </div>
+    <div class="process-card">
+        <h4>Cancellation Process</h4>
+        <p>{{ operator.cancellation }}</p>
+    </div>
+</div>
 
 {% endblock body %}
